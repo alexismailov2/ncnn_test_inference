@@ -11,9 +11,9 @@ add_executable(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME}
         PRIVATE
         #${OpenCV_INCLUDE_DIRS}
-        ncnn/build_host/install/include)
+	C:\\ncnn_test_inference\\ncnn\\build_embarc\\install\\include)
 
 target_link_libraries(${PROJECT_NAME}
         PRIVATE
         #${OpenCV_LIBS}
-        ${CMAKE_CURRENT_SOURCE_DIR}/ncnn/build_host/install/lib/libncnn.a)
+	-LC:\\ncnn_test_inference\\ncnn\\build_embarc\\install\\lib ncnn.lib)

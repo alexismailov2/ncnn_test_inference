@@ -149,13 +149,13 @@ int main()
   //cv::Mat inin = cv::imread("/Users/alexanderismailov/CLionProjects/ncnn_test_inference/1.bmp", cv::IMREAD_COLOR);
 
   char* rgba_data = new char[320*320*3];
-  std::ifstream file("/Users/alexanderismailov/CLionProjects/ncnn_test_inference/assets/image_array.bin", std::ios::binary);
+  std::ifstream file("./assets/image_array.bin", std::ios::binary);
   file.read(rgba_data, 320*320*3);
   if (!yolo)
   {
     yolo = new ncnn::Net;
-    yolo->load_param("/Users/alexanderismailov/CLionProjects/ncnn_test_inference/assets/yolo-fastest-opt.param");
-    yolo->load_model("/Users/alexanderismailov/CLionProjects/ncnn_test_inference/assets/yolo-fastest-opt.bin");
+    yolo->load_param("./assets/yolo-fastest-opt.param");
+    yolo->load_model("./assets/yolo-fastest-opt.bin");
   }
 
   const int target_size = 320;

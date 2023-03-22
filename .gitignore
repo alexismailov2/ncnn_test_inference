@@ -1,0 +1,4 @@
+build_embarc
+build_mingw
+build_host
+ncnn
