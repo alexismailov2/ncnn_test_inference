@@ -1,3 +1,4 @@
+#!/bin/bash
 #git clone https://github.com/Tencent/ncnn.git
 cd ncnn
 
